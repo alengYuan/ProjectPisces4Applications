@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="color-scheme" content="light dark">
+    <title>Rhythm::Content</title>
+    <style>
+        @media (prefers-color-scheme: light) {
+            :root {
+                --layer-border-color: #d8d8d8;
+                --layer-background: #f9f9f9;
+                --text-color: #1a1a1a;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --layer-border-color: #171717;
+                --layer-background: #272727;
+                --text-color: #ffffff;
+            }
+        }
+
+        * {
+            forced-color-adjust: none;
+            user-select: none;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #content {
+            box-sizing: border-box;
+            flex-shrink: 0;
+            flex-grow: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px var(--layer-border-color) solid;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px -4px #1010103f;
+            width: calc(100vw - 8px);
+            height: calc(100vh - 8px);
+            background: var(--layer-background);
+            color: var(--text-color);
+        }
+
+        #text {
+            flex-shrink: 0;
+            flex-grow: 0;
+            width: calc(100% - 20px);
+            font-family: 'Segoe UI Variable Display', 'Segoe UI', 'Microsoft Yahei UI', system-ui;
+            font-size: 12px;
+            overflow: hidden;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div id="content">
+        <div id="text"></div>
+    </div>
+    <script type="module">
+        import { main } from './renderer/content.js'
+
+        setTimeout(main)
+    </script>
+</body>
+
+</html>

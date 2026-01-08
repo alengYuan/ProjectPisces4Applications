@@ -1,0 +1,56 @@
+[package]
+edition = "2024"
+name = "rhythm-native-player"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi-derive = "2.16.13"
+windows-core = "0.62.2"
+
+[dependencies.napi]
+version = "2.16.17"
+default-features = false
+features = ["napi9"]
+
+[dependencies.rubato]
+version = "0.16.2"
+default-features = false
+features = []
+
+[dependencies.symphonia]
+version = "0.5.5"
+default-features = false
+features = [
+    "flac",
+    "mp3",
+    "opt-simd-avx",
+    "opt-simd-sse",
+]
+
+[dependencies.windows]
+version = "0.62.2"
+default-features = false
+features = [
+    "Devices_Enumeration",
+    "Media_Devices",
+    "Win32_Devices_FunctionDiscovery",
+    "Win32_Media_Audio",
+    "Win32_Media_KernelStreaming",
+    "Win32_Media_Multimedia",
+    "Win32_Security",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_Threading",
+    "Win32_System_Variant",
+    "Win32_UI_Shell_PropertiesSystem",
+]
+
+[build-dependencies]
+napi-build = "2.2.4"
+
+[profile.release]
+lto = true
+panic = "abort"
+strip = "symbols"

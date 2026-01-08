@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="color-scheme" content="light dark">
+    <!-- reactApp -->
+    <title></title>
+    <style id="root-style">
+        @font-face {
+            font-family: 'fluent-regular';
+            src: url('./asset/misc/fluent-regular.ttf') format('truetype');
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'fluent-filled';
+            src: url('./asset/misc/fluent-filled.ttf') format('truetype');
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'slothindie-rings';
+            src: url('./asset/misc/slothindie-rings.ttf') format('truetype');
+            font-display: fallback;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --accessibility-outline: 2px #191919 solid;
+                --accessibility-outline-non-interactive: 2px #191919 dashed;
+                --layer-border-color: #e5e5e5;
+                --layer-background: #f3f3f3;
+                --layer-background-hover: #d3d3d3;
+                --layer-background-active: #b4b4b4;
+                --layer-color-focus: #171717;
+                --layer-color-blur: #a4a4a4;
+                --page-background: #f9f9f999;
+                --panel-border-color: #e5e5e5;
+                --panel-border-color-hover: #e5e5e5 #e5e5e5 #cccccc #e5e5e5;
+                --panel-border-color-active: #e5e5e5;
+                --panel-background: #fbfbfba6;
+                --panel-background-hover: #f6f6f6a6;
+                --panel-background-active: #f5f5f5a6;
+                --panel-magazine-background: #fbfbfb9c;
+                --tab-slot-border: inset 0 1px #cccccc;
+                --tab-slot-background: #00000015;
+                --transparent-button-background-hover: #e3e3e3a8;
+                --transparent-button-background-active: #e5e5e5a8;
+                --slider-thumb-border-color: #ffffff;
+                --slider-thumb-background-disabled: #c8c8c8;
+                --slider-track-background: #8a8a8a;
+                --slider-track-background-disabled: #aaaaaa;
+                --normal-button-border-color: #e5e5e5 #e5e5e5 #cccccc #e5e5e5;
+                --normal-button-border-color-active: #e5e5e5;
+                --normal-button-background: #fbfbfb;
+                --normal-button-background-hover: #f6f6f6;
+                --normal-button-background-active: #f5f5f5;
+                --card-background: #f9f9f999;
+                --card-background-hover: #f9f9f999;
+                --card-background-active: #f9f9f94d;
+                --text-input-border-color: #e5e5e5 #e5e5e5 #868686 #e5e5e5;
+                --text-input-background-active: #ffffff;
+                --text-input-caret-color: #000000;
+                --text-color: #1a1a1a;
+                --text-color-hover: #5c5c5c;
+                --text-color-active: #868686;
+                --text-color-disabled: #9b9b9b;
+                --dialog-border-color: #1d1d1d2d;
+                --dialog-information-background: #ffffff;
+
+                --cover-card-accessibility-outline: 2px #ffffff solid;
+                --cover-card-image-url: url("./asset/image/theme-light-default-cover.webp");
+                --cover-card-on-primary-container: #ffdbc7;
+                --cover-card-primary: #ffb687;
+                --cover-card-on-primary: #512400;
+                --cover-card-feedback-mix-material: #272727;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --accessibility-outline: 2px #ffffff solid;
+                --accessibility-outline-non-interactive: 2px #ffffff dashed;
+                --layer-border-color: #1d1d1d;
+                --layer-background: #202020;
+                --layer-background-hover: #3e3e3e;
+                --layer-background-active: #5a5a5a;
+                --layer-color-focus: #f2f2f2;
+                --layer-color-blur: #5d5d5d;
+                --page-background: #3d3d3d40;
+                --panel-border-color: #212121;
+                --panel-border-color-hover: #35353580 #30303080 #30303080 #30303080;
+                --panel-border-color-active: #cccccc14;
+                --panel-background: #dedede17;
+                --panel-background-hover: #e3e3e321;
+                --panel-background-active: #c9c9c912;
+                --panel-magazine-background: #dedede14;
+                --tab-slot-border: 0 1px #6b6b6b41;
+                --tab-slot-background: #00000090;
+                --transparent-button-background-hover: #36363678;
+                --transparent-button-background-active: #30303078;
+                --slider-thumb-border-color: #454545;
+                --slider-thumb-background-disabled: #626262;
+                --slider-track-background: #9e9e9e;
+                --slider-track-background-disabled: #5c5c5c;
+                --normal-button-border-color: #adadad14 #6b6b6b14 #6b6b6b14 #6b6b6b14;
+                --normal-button-border-color-active: #6b6b6b14;
+                --normal-button-background: #e8e8e812;
+                --normal-button-background-hover: #ededed17;
+                --normal-button-background-active: #e0e0e00a;
+                --card-background: #27272799;
+                --card-background-hover: #27272799;
+                --card-background-active: #2727274d;
+                --text-input-border-color: #303030 #303030 #9a9a9a #303030;
+                --text-input-background-active: #1f1f1f;
+                --text-input-caret-color: #e0e0e0;
+                --text-color: #ffffff;
+                --text-color-hover: #cccccc;
+                --text-color-active: #969696;
+                --text-color-disabled: #717171;
+                --dialog-border-color: #e5e5e52d;
+                --dialog-information-background: #2b2b2b;
+
+                --cover-card-accessibility-outline: 2px #ffffff solid;
+                --cover-card-image-url: url("./asset/image/theme-dark-default-cover.webp");
+                --cover-card-on-primary-container: #ffdbd1;
+                --cover-card-primary: #ffb5a0;
+                --cover-card-on-primary: #561f10;
+                --cover-card-feedback-mix-material: #272727;
+            }
+        }
+
+        :root {
+            --logo-font-family: 'slothindie-rings';
+        }
+
+        * {
+            forced-color-adjust: none;
+            outline-offset: 1px;
+            font-family: 'Segoe UI Variable Display', 'Segoe UI', 'Microsoft Yahei UI', system-ui;
+            user-select: none;
+        }
+
+        html,
+        body,
+        #dom {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #dom {
+            position: relative;
+            pointer-events: none;
+        }
+
+        #backdrop {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--layer-background);
+        }
+
+        #backdrop-stage {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background:
+                linear-gradient(var(--primary-container-dilute),
+                    transparent),
+                linear-gradient(-45deg,
+                    var(--secondary-container-dilute),
+                    transparent),
+                linear-gradient(45deg,
+                    var(--tertiary-container-dilute),
+                    transparent);
+            background-blend-mode: multiply;
+            filter: blur(42px);
+            opacity: 0;
+            transition: opacity 0.25s ease-in;
+        }
+
+        #backdrop-stage::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc((100vw - env(titlebar-area-width)) / 3 * 4 + 42px);
+            height: calc(env(titlebar-area-height) + 42px);
+            background: var(--layer-background);
+        }
+
+        .focused #backdrop-stage {
+            opacity: 1;
+        }
+
+        #backdrop-mask {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: var(--layer-background);
+
+            @media (prefers-color-scheme: light) {
+                opacity: 0.84;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                opacity: 0.78;
+            }
+        }
+
+        input[type="text"],
+        textarea {
+            user-select: text;
+        }
+    </style>
+    <link rel="preload" href="./asset/image/theme-light-default-cover.webp" as="image" type="image/webp" />
+    <link rel="preload" href="./asset/image/theme-dark-default-cover.webp" as="image" type="image/webp" />
+    <link rel="preload" href="./asset/image/high-quality-indicator.png" as="image" type="image/png" />
+</head>
+
+<body oncontextmenu="return false"
+    onselectstart="if (!(event.target instanceof HTMLInputElement) && !(event.target instanceof HTMLTextAreaElement)) { return false }"
+    ondragstart="return false">
+    <div id="dom">
+        <div id="backdrop">
+            <div id="backdrop-stage"></div>
+            <div id="backdrop-mask"></div>
+        </div>
+    </div>
+    <script type="module">
+        import { main } from './renderer/main.js'
+
+        setTimeout(main)
+    </script>
+</body>
+
+</html>

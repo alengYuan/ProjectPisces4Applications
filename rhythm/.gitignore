@@ -1,0 +1,11 @@
+cache
+config
+module
+node_modules
+release
+
+source/main/service/player.d.ts
+source/main/service/smtc.d.ts
+
+desktop.ini
+.DS_Store

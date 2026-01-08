@@ -1,0 +1,10 @@
+.idea
+
+target
+
+index.d.ts
+index.js
+*.node
+
+desktop.ini
+.DS_Store

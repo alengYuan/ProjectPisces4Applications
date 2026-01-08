@@ -1,0 +1,32 @@
+[package]
+edition = "2024"
+name = "rhythm-native-smtc"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi-derive = "2.16.13"
+
+[dependencies.napi]
+version = "2.16.17"
+default-features = false
+features = ["napi9"]
+
+[dependencies.windows]
+version = "0.62.2"
+default-features = false
+features = [
+    "Media_Playback",
+    "Storage_Search",
+    "Storage_Streams",
+]
+
+[build-dependencies]
+napi-build = "2.2.4"
+
+[profile.release]
+lto = true
+panic = "abort"
+strip = "symbols"

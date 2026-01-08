@@ -1,0 +1,18 @@
+{
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact"
+    ],
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "index.jsx": "model.*js, style.js",
+        "*.js": "${capture}.worker.js",
+        "*.mjs": "${capture}.worker.mjs"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    }
+}

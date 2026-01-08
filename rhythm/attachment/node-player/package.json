@@ -1,0 +1,11 @@
+{
+  "napi": {
+    "name": "rhythm.native.player",
+    "triples": {
+      "defaults": false,
+      "additional": [
+        "x86_64-pc-windows-msvc"
+      ]
+    }
+  }
+}
