@@ -30,6 +30,7 @@ import {
 } from './util/index.mjs'
 import { handleShowContent } from './content/index.mjs'
 import {
+    setMetadataParserWorkerPool,
     clearMetadataParserWorkerPool,
     maintainValidTable,
     updateDatabaseByType,
@@ -2263,6 +2264,8 @@ class Rhythm extends EventEmitter {
                     delete: 0,
                 }
 
+                setMetadataParserWorkerPool()
+
                 await Promise.allSettled(
                     formatList.map(
                         async format =>
@@ -2280,17 +2283,6 @@ class Rhythm extends EventEmitter {
                 )
 
                 clearMetadataParserWorkerPool()
-
-                rmSync(this.#storageFilePath, {
-                    force: true,
-                    recursive: true,
-                })
-
-                try {
-                    await this.#storage.backup(this.#storageFilePath)
-                } catch (error) {
-                    console.error(error)
-                }
 
                 this.emit('library-database-updated', { type })
 

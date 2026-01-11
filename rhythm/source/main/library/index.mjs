@@ -3,11 +3,12 @@ import { rm, stat } from 'node:fs/promises'
 import { join } from 'node:path'
 import { v4 as uuid } from 'uuid'
 import {
+    setMetadataParserWorkerPool,
     requestMetadataParser,
     clearMetadataParserWorkerPool,
 } from './metadataParserManager.mjs'
 import { writeFile } from '../util/index.mjs'
-export { clearMetadataParserWorkerPool }
+export { setMetadataParserWorkerPool, clearMetadataParserWorkerPool }
 
 /**
  * @typedef {{

@@ -8,6 +8,8 @@ const workerScriptPath = join(
     './metadataParserManager.worker.mjs',
 )
 
+let taskBatchCount = 0
+
 const workerPoolMaxCount = 12
 
 const workerPoolCount = Math.min(
@@ -157,6 +159,13 @@ const nextTaskHandler = () => {
 }
 
 /**
+ * @type {()=>void}
+ */
+export const setMetadataParserWorkerPool = () => {
+    taskBatchCount += 1
+}
+
+/**
  * @type {(
  * format:import("./index.mjs").Format,
  * libraryPath:string,
@@ -194,6 +203,12 @@ export const requestMetadataParser = (
  * @type {()=>void}
  */
 export const clearMetadataParserWorkerPool = () => {
+    taskBatchCount -= 1
+
+    if (taskBatchCount) {
+        return
+    }
+
     if (taskQueue.length + jobQueue.length) {
         throw new ReferenceError(
             'The worker pool can only be cleared after all tasks are completed.',

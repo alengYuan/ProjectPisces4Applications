@@ -2,7 +2,7 @@
   "name": "rhythm",
   "productName": "Rhythm",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "source/entry.mjs",
   "type": "module",
   "devDependencies": {
