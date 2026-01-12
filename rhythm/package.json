@@ -2,7 +2,7 @@
   "name": "rhythm",
   "productName": "Rhythm",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "source/entry.mjs",
   "type": "module",
   "devDependencies": {
@@ -18,7 +18,7 @@
     "@rollup/plugin-terser": "0.4.4",
     "@swc/core": "1.11.29",
     "@types/better-sqlite3": "7.6.12",
-    "@types/express": "5.0.2",
+    "@types/express": "5.0.6",
     "@types/node": "20.16.0",
     "@types/react": "18.2.69",
     "@types/react-dom": "18.2.22",
@@ -27,7 +27,7 @@
     "eslint": "8.57.1",
     "eslint-plugin-react": "7.34.1",
     "eslint-plugin-react-hooks": "4.6.0",
-    "express": "5.1.0",
+    "express": "5.2.1",
     "immer": "10.1.1",
     "jotai": "2.10.4",
     "music-metadata": "11.2.3",
@@ -47,6 +47,7 @@
   },
   "overrides": {
     "js-yaml": "4.1.1",
-    "prettier": "3.3.3"
+    "prettier": "3.3.3",
+    "qs": "6.14.1"
   }
 }

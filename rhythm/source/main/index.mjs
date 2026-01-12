@@ -4499,6 +4499,8 @@ WHERE uuid = ?`,
                         if (server) {
                             await new Promise(resolve => {
                                 server.close(resolve)
+
+                                server.closeAllConnections()
                             })
                         }
 
