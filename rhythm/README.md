@@ -190,6 +190,13 @@ The color scheme and cover image for each card in the list are processed in real
 
 <details open>
 <summary>
+<h3 style="display: inline;">Why is this player no longer recommended when my library exceeds 1,000 tracks?</h3>
+</summary>
+To ensure a consistent experience for screen reader users, the card list in Rhythm's main interface cannot utilize more aggressive or efficient optimization techniques. Furthermore, paginated lists are often ill-suited for the typical browsing experience of a local music player. As a result, Rhythm chooses to forgo further optimization. Much like the decisions made regarding its supported audio specifications, we believe that maintaining restraint, simplicity, and respect for accessibility is more important than trying to be everything to everyone. While Rhythm can handle heavier loads more easily in Core mode, this does not change the fact that performance bottlenecks exist in full mode, which is why it is stated as such in the introduction.
+</details>
+
+<details open>
+<summary>
 <h3 style="display: inline;">The player sometimes doesn't respond when I change the system accent color; when I use gray or grayscale colors, the results are always unexpected!</h3>
 </summary>
 When the OS accent color is modified, system-level issues can sometimes prevent third-party software, or even the system's own panels, from correctly detecting the change. You may try restarting the player, restarting the OS, or reapplying the color settings to overcome this. Regarding the "incorrect" response to gray tones: the player utilizes a color algorithm derived from Material Design 3. A key feature of this algorithm is its tendency to generate color schemes with good accessibility that are never entirely "hueless" or achromatic. Consequently, not all colors are suitable as a "color source," and certain colors (including grays) may produce results that differ from your expectations after processing.
