@@ -17,10 +17,15 @@
     },
     "exclude": [
         ".vscode",
+        "attachment",
         "batch",
+        "cache",
         "config",
         "module",
         "node_modules",
-        "release"
+        "package",
+        "policy",
+        "release",
+        "screenshot"
     ]
 }
