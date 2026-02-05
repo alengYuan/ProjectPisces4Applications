@@ -1,4 +1,4 @@
-# Rhythm @ProjectPisces
+# Rhythm @ProjectPisces &middot; [![GitHub license](https://img.shields.io/badge/license-Apache%202.0%20%26%20Others-6e528b?style=flat-square&labelColor=484848)](https://github.com/alengYuan/ProjectPisces4Applications/blob/main/rhythm/policy/LICENSE.md)
 
 A simple local music player for Windows 11 and later.
 

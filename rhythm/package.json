@@ -8,7 +8,7 @@
   "devDependencies": {
     "@emotion/react": "11.14.0",
     "@material/material-color-utilities": "0.3.0",
-    "@projectleo/tickerjs": "1.4.1",
+    "@projectleo/tickerjs": "1.5.0",
     "@react-aria/optimize-locales-plugin": "1.1.5",
     "@rollup/plugin-commonjs": "28.0.1",
     "@rollup/plugin-json": "6.1.0",
@@ -47,6 +47,7 @@
   },
   "overrides": {
     "js-yaml": "4.1.1",
+    "lodash": "4.17.23",
     "prettier": "3.3.3",
     "qs": "6.14.1"
   }
