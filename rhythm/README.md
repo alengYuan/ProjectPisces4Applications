@@ -33,6 +33,10 @@ A simple local music player for Windows 11 and later.
 -   You are looking for a universal player that supports a vast range of formats and can be set as the system default.
 -   You have a strong dislike for Electron-based software.
 
+## Downloads
+
+-   Convenience builds on [GitHub Releases](https://github.com/alengYuan/ProjectPisces4Applications/releases?q=Convenience+Build+for+Rhythm&expanded=true)
+
 ## Overview
 
 ### Key features
