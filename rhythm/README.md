@@ -35,7 +35,8 @@ A simple local music player for Windows 11 and later.
 
 ## Downloads
 
--   Convenience builds on [GitHub Releases](https://github.com/alengYuan/ProjectPisces4Applications/releases?q=Convenience+Build+for+Rhythm&expanded=true)
+-   Convenience builds on [GitHub Releases](https://github.com/alengYuan/ProjectPisces4Applications/releases?q=Convenience+Build+for+Rhythm&expanded=true).
+-   Convenience builds on [itch.io](https://aleng-yuan.itch.io/slothindie-rhythm).
 
 ## Overview
 
@@ -208,4 +209,4 @@ When the OS accent color is modified, system-level issues can sometimes prevent 
 
 ## License
 
-Rhythm is licensed under a hybrid agreement primarily based on the **Apache License 2.0**; for specific details, please consult the contents in `rhythm/policy/LICENSE.md`.
+Rhythm is licensed under a hybrid agreement primarily based on the **Apache License 2.0**. For specific details, please consult the contents in `rhythm/policy/LICENSE.md`.
